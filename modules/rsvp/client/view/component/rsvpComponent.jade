@@ -1,0 +1,21 @@
+.rsvp-container
+    .rsvp-background
+        img(src="images/rsvp/content-background.jpg")
+
+    .rsvp-functional-container
+        div(ng-show = "passcodeVisible")
+            passcode()
+
+        .guest-container
+            div(ng-show = "rsvpNamesVisible")
+                rsvp-names()
+            div(ng-show = "acceptDeclineVisible")
+                accept-decline()
+            div(ng-show = "guestInfoVisible")
+                guest-info()
+            div(ng-show = "verificationDeclineVisible || verificationAcceptVisible")
+                verification()
+
+        p.response(ng-show="successAcceptResponse") SUCCESS! WE CAN'T WAIT TO SEE YOU!
+        p.response(ng-show="successDeclineResponse") THANK YOU FOR REPLYING!
+        p.response(ng-show="failResponse") SOMETHING WENT WRONG! REFRESH AND TRY AGAIN PLEASE.
